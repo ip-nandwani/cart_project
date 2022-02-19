@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-import Cart from './Cart';
+import App from './App';
+import CartItem from './CartItem';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Cart />
+    <App />
+    <CartItem />
   </React.StrictMode>,
   document.getElementById('root')
 );
