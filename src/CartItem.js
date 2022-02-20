@@ -7,16 +7,20 @@ class CartItem extends React.Component {
       price: 999,
       title: 'Smartphone',
       qty: 1,
-      img: '',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGbWaGLAE0OjTw6IxgbuKS10xgaIuVPhjSvg&usqp=CAU',
     };
   }
 
+  increaseQuantity = () => {
+    console.log('this', this.state);
+  }
+
   render() {
-    const { price, title, qty } = this.state;
+    const { price, title, qty, img } = this.state;
     return (
       <div className="cart-item">
         <div className="left-block">
-          <img alt="" style={styles.image} />
+          <img alt="" style={styles.image} src={img}/>
         </div>
         <div className="right-block">
           <div style={{ fontSize: '25px' }}> {title} </div>
@@ -28,6 +32,7 @@ class CartItem extends React.Component {
               alt="increase"
               className="action-icons"
               src="https://cdn-icons-png.flaticon.com/512/992/992651.png"
+              onClick = {this.increaseQuantity}
             />
             <img
               alt="decrease"
